@@ -2,17 +2,16 @@ import React from 'react';
 import Slider from '../components/Slider';
 import Nav from '../components/Nav';
 import Navigation from '../components/Navigation';
-import Products from '../components/Products';
+import FeaturedProducts from '../components/FeaturedProducts';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 
 const Home = () => {
   return (
     <div>
-      {/* <Navigation /> */}
-      <Nav />
+      <Navigation />
       <Slider />
-      <Products />
+      <FeaturedProducts />
       <Newsletter />
       <Footer />
     </div>

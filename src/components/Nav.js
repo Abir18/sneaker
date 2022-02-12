@@ -1,5 +1,4 @@
 import React from 'react';
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -48,7 +47,7 @@ const ResponsiveAppBar = () => {
           >
             <span style={{ color: 'red', fontSize: '3rem' }}>S</span>
             <span style={{ marginTop: '20px', fontSize: '1.8rem' }}>
-              NEAKER
+              NEAKERS
             </span>
           </Typography>
 

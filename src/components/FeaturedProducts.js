@@ -1,15 +1,13 @@
 import { Grid, Container, Box, Typography } from '@mui/material';
 import React from 'react';
 import useProducts from '../hooks/useProducts';
-import Navigation from './Navigation';
 import SingleProduct from './SingleProduct';
 
-const Products = () => {
+const FeaturedProducts = () => {
   const { products } = useProducts();
 
   return (
     <>
-      <Navigation />
       <Box sx={{ flexGrow: 1 }}>
         <Typography
           sx={{ fontWeight: 700, mt: 5, mb: 3 }}
@@ -32,7 +30,7 @@ const Products = () => {
             // spacing={{ xs: 2, md: 8 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            {products.map(product => (
+            {products.slice(0, 6).map(product => (
               <SingleProduct key={product._id} product={product} />
             ))}
           </Grid>
@@ -42,4 +40,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default FeaturedProducts;

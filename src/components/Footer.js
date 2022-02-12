@@ -20,7 +20,9 @@ const Left = styled.div`
   padding: 20px;
 `;
 
-const Logo = styled.h1``;
+const Logo = styled.h1`
+  margin-bottom: 10px;
+`;
 
 const Desc = styled.p`
   margin: 20px 0px;
@@ -28,6 +30,8 @@ const Desc = styled.p`
 
 const SocialContainer = styled.div`
   display: flex;
+  margin-left: 180px;
+  margin-top: 10px;
 `;
 
 const SocialIcon = styled.div`
@@ -56,13 +60,15 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  margin-left: 200px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
 `;
 
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  font-size: 14px;
 `;
 
 const Right = styled.div`
@@ -79,6 +85,7 @@ const ContactItem = styled.div`
 
 const Payment = styled.img`
   width: 50%;
+  margin-right: 300px;
 `;
 
 const Footer = () => {
@@ -88,13 +95,15 @@ const Footer = () => {
         {/* <Logo>SNEAKER</Logo> */}
         <Logo>
           <span style={{ color: 'red', fontSize: '3rem' }}>S</span>
-          <span style={{ marginTop: '20px', fontSize: '1.8rem' }}>NEAKER</span>
+          <span style={{ marginTop: '20px', fontSize: '1.8rem' }}>NEAKERS</span>
         </Logo>
 
         <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+          Through our collections we blur the borders between high fashion and
+          high performance. Some of our Sneakers Originals lifestyle pieces,
+          that can be worn as sports apparel too. Our lives are constantly
+          changing. Becoming more and more versatile. And Sneakers designs with
+          that in mind.
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -116,18 +125,14 @@ const Footer = () => {
         <List>
           <ListItem>Home</ListItem>
           <ListItem>Cart</ListItem>
-          <ListItem>Man Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
           <ListItem>Accessories</ListItem>
           <ListItem>My Account</ListItem>
-          <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
           <ListItem>Wishlist</ListItem>
           <ListItem>Terms</ListItem>
         </List>
       </Center>
       <Right>
-        <Title>Contact</Title>
+        <Title style={{ marginRight: '520px' }}>Contact</Title>
         <ContactItem>
           <RoomIcon style={{ marginRight: '10px' }} /> 622 Dixie Path , South
           Tobinchester 98336
@@ -137,7 +142,7 @@ const Footer = () => {
         </ContactItem>
         <ContactItem>
           <MailOutlineIcon style={{ marginRight: '10px' }} />{' '}
-          contact@sneaker.dev
+          contact@sneakers.dev
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

@@ -1,24 +1,24 @@
 export const sliderItems = [
   {
     id: 1,
-    img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/96a5f085fedf4e678095abad01056711_9366/Lite_Racer_Adapt_3.0_Shoes_Black_FX8802_01_standard.jpg',
+    img: 'https://i.ibb.co/C12sddC/Lite-Racer-Adapt-3-0-Shoes-Red-FX8809-43-detail.jpg',
     title: 'WINTER SALE',
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: 'eceff1',
   },
   {
     id: 2,
-    img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/49bd53d2f705481a8c0eabad0105ad42_9366/Lite_Racer_Adapt_3.0_Shoes_White_FX8803_01_standard.jpg',
+    img: 'https://i.ibb.co/tJXPm3q/Lite-Racer-Adapt-3-0-Shoes-Black-FX8802-01-standard.jpg',
     title: 'AUTUMN COLLECTION',
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: 'fcf1ed',
+    bg: 'eceff1',
   },
   {
     id: 3,
-    img: 'https://i.ibb.co/cXFnLLV/3.png',
+    img: 'https://i.ibb.co/kmQXBkr/Lite-Racer-Adapt-3-0-Shoes-White-FX8803-02-standard.jpg',
     title: 'LOUNGEWEAR LOVE',
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: 'fbf0f4',
+    bg: 'eceff1',
   },
 ];
 
