@@ -47,7 +47,7 @@ const useFirebase = () => {
             // ...
           });
 
-        // Store User Into Mongo Database Collection
+        // Store User Into MongoDB Database Collection
         saveUserToDatabase(email, name, 'POST');
 
         history.replace('/');
@@ -151,7 +151,7 @@ const useFirebase = () => {
     // });
 
     // With Fetch
-    fetch('https://polar-bastion-01816.herokuapp.com/users', {
+    fetch('https://sneakers-website.herokuapp.com/users', {
       method: method,
       headers: {
         'Content-Type': 'application/json',

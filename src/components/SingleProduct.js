@@ -16,20 +16,42 @@ const SingleProduct = ({ product }) => {
         <Card sx={{ minWidth: 345 }}>
           <CardMedia
             style={{
-              width: 'auto',
-              height: '200px',
+              width: '350px',
+              height: '300px',
               //   margin: '0 auto',
             }}
             component="img"
             image={image}
-            alt="bike"
+            alt="shoe"
           />
           <CardContent>
-            <Typography sx={{ mb: 3 }} variant="h5" component="div">
+            <Typography
+              variant="caption"
+              sx={{
+                position: 'relative',
+                top: '-40px',
+                left: '-150px',
+                background: 'white',
+                // width: '100%',
+                fontSize: '16px',
+                // fontWeight: '500',
+              }}
+            >
+              $ {price}
+            </Typography>
+            <Typography
+              sx={{ mb: 2, fontSize: '18px', fontWeight: 'bold' }}
+              variant="h5"
+              component="div"
+            >
               {name}
             </Typography>
 
-            <Typography variant="h6" color="text.disabled">
+            <Typography
+              variant="h6"
+              // color="text.disabled"
+              sx={{ fontSize: '14px' }}
+            >
               {description}
             </Typography>
           </CardContent>
