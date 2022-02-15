@@ -2,23 +2,24 @@ export const sliderItems = [
   {
     id: 1,
     img: 'https://i.ibb.co/C12sddC/Lite-Racer-Adapt-3-0-Shoes-Red-FX8809-43-detail.jpg',
-    title: 'WINTER SALE',
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    title: 'FLEXIBILITY FOR SPEED',
+    desc: 'STRETCH AROUND THE COLLAR LETS YOUR FOOT MOVE NATURALLY AS YOU BURST, CUT AND BRAKE.',
     bg: 'eceff1',
   },
   {
     id: 2,
-    img: 'https://i.ibb.co/tJXPm3q/Lite-Racer-Adapt-3-0-Shoes-Black-FX8802-01-standard.jpg',
-    title: 'AUTUMN COLLECTION',
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: 'eceff1',
+    img: 'https://i.ibb.co/vJFcbkg/zoom-freak-3-team-basketball-shoe-9-FVl5-X.png',
+    title: 'STABILITY FOR STRENGTH',
+    desc: 'FREE TECHNOLOGY IN THE FOREFOOT CREATES FLEXIBILITY FOR AGILITY MOVES AND SPRINTS.',
+    bg: 'f6f6f6',
   },
+
   {
     id: 3,
-    img: 'https://i.ibb.co/kmQXBkr/Lite-Racer-Adapt-3-0-Shoes-White-FX8803-02-standard.jpg',
-    title: 'LOUNGEWEAR LOVE',
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: 'eceff1',
+    img: 'https://i.ibb.co/X7TFhqF/air-max-excee-mens-shoes-vl97pm.png',
+    title: 'FREESTYLE LOVE',
+    desc: "DON'T COMPROMISE ON STYLE!",
+    bg: 'F6F6F6',
   },
 ];
 

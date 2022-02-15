@@ -59,7 +59,7 @@ const Navigation = () => {
               <li>PRODUCTS</li>
             </NavLink>
             <NavLink to="/contact" activeClassName="current" exact>
-              <li>CONTACT</li>
+              <li>ABOUT US</li>
             </NavLink>
           </NavUnlisted>
 

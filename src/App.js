@@ -6,6 +6,10 @@ import Contact from './Pages/Contact';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
 import AuthProvider from './Context/AuthProvider';
+import Purchase from './Pages/Purchase';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import ProductDetails from './components/ProductDetails';
+import NotFound from './Pages/NotFound';
 
 function App() {
   return (
@@ -27,6 +31,16 @@ function App() {
             </Route>
             <Route path="/register">
               <Register />
+            </Route>
+
+            <Route path="/product/:id">
+              <ProductDetails />
+            </Route>
+            <PrivateRoute path="/purchase/product/:id">
+              <Purchase />
+            </PrivateRoute>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </BrowserRouter>
