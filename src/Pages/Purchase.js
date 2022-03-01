@@ -51,7 +51,7 @@ const Purchase = () => {
   const handleLoginForm = e => {
     e.preventDefault();
     axios
-      .post('https://polar-bastion-01816.herokuapp.com/orders', userData)
+      .post('https://sneakers-website.herokuapp.com/orders', userData)
       .then(response => {
         if (response.data.insertedId) {
           alert('You Ordered Successfully');

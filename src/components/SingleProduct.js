@@ -56,7 +56,7 @@ const SingleProduct = ({ product }) => {
                   background: 'white',
                   // width: '100%',
                   fontSize: '16px',
-                  // fontWeight: '500',
+                  fontWeight: '700',
                 }}
               >
                 $ {price}

@@ -1,25 +1,26 @@
+export const login = `https://ps.w.org/login-customizer/assets/icon-256x256.png?rev=2455454`;
+
 export const sliderItems = [
   {
     id: 1,
+    img: 'https://i.ibb.co/X7TFhqF/air-max-excee-mens-shoes-vl97pm.png',
+    title: 'FREESTYLE LOVE',
+    desc: "DON'T COMPROMISE ON STYLE!",
+    bg: 'F6F6F6',
+  },
+  {
+    id: 2,
     img: 'https://i.ibb.co/C12sddC/Lite-Racer-Adapt-3-0-Shoes-Red-FX8809-43-detail.jpg',
     title: 'FLEXIBILITY FOR SPEED',
     desc: 'STRETCH AROUND THE COLLAR LETS YOUR FOOT MOVE NATURALLY AS YOU BURST, CUT AND BRAKE.',
     bg: 'eceff1',
   },
   {
-    id: 2,
+    id: 3,
     img: 'https://i.ibb.co/vJFcbkg/zoom-freak-3-team-basketball-shoe-9-FVl5-X.png',
     title: 'STABILITY FOR STRENGTH',
     desc: 'FREE TECHNOLOGY IN THE FOREFOOT CREATES FLEXIBILITY FOR AGILITY MOVES AND SPRINTS.',
     bg: 'f6f6f6',
-  },
-
-  {
-    id: 3,
-    img: 'https://i.ibb.co/X7TFhqF/air-max-excee-mens-shoes-vl97pm.png',
-    title: 'FREESTYLE LOVE',
-    desc: "DON'T COMPROMISE ON STYLE!",
-    bg: 'F6F6F6',
   },
 ];
 

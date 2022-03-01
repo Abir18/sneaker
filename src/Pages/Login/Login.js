@@ -13,6 +13,7 @@ import {
 import { Link, NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Navigation from '../../components/Navigation';
+import { login } from '../../data';
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
@@ -123,9 +124,13 @@ const Login = () => {
           </Container>
         </Grid>
 
-        {/* <Grid item xs={12} md={6} sx={{ mt: 25 }}>
-          <img style={{ width: '70%', marginTop: '70px' }} src={login} alt="" />
-        </Grid> */}
+        <Grid item xs={12} md={6} sx={{ mt: 25 }}>
+          <img
+            style={{ width: '50%', marginTop: '70px' }}
+            src={login}
+            alt="login"
+          />
+        </Grid>
       </Grid>
     </>
   );

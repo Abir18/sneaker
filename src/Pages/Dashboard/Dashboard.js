@@ -26,6 +26,7 @@ import MakeAdmin from './AdminPages/MakeAdmin/MakeAdmin';
 import Payment from './UsersPages/Payment/Payment';
 import MyOrders from './UsersPages/MyOrders/MyOrders';
 import useAuth from '../../hooks/useAuth';
+import Review from './UsersPages/Review/Review';
 // import AdminRoute from '../Login/AdminRoute/AdminRoute';
 // import Payment from '../Payment/Payment';
 // import MyOrders from '../MyOrders/MyOrders';
@@ -58,7 +59,7 @@ function Dashboard(props) {
       <Toolbar />
       <Link to="/" style={{ textDecoration: 'none' }}>
         <Button color="inherit" sx={{ color: '#000', mb: 3 }}>
-          Home
+          Home Page
         </Button>
       </Link>
 
@@ -105,7 +106,7 @@ function Dashboard(props) {
           </Link>
           <Link to={`${url}/add-product`} style={{ textDecoration: 'none' }}>
             <Button color="inherit" sx={{ color: '#000', mt: 3 }}>
-              Add A Product
+              Add Product
             </Button>
           </Link>
           <Link
@@ -140,6 +141,7 @@ function Dashboard(props) {
       <AppBar
         position="fixed"
         sx={{
+          background: '#333',
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
@@ -154,11 +156,21 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Dashboard
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ color: 'yellow' }}
+          >
+            Welcome to Dashboard
           </Typography>
         </Toolbar>
       </AppBar>
+
+      {/* <Typography variant="h2" sx={{ mt: 20, ml: 40 }}>
+        Welcome to Dashboard
+      </Typography> */}
+      {/* <h1 style={{ marginLeft: '300px' }}>Welcome To Dashboard</h1> */}
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
@@ -229,9 +241,9 @@ function Dashboard(props) {
           <Route path={`${path}/my-orders`}>
             <MyOrders />
           </Route>
-          {/* <Route path={`${path}/review`}>
-            <MakeReview />
-          </Route> */}
+          <Route path={`${path}/review`}>
+            <Review />
+          </Route>
         </Switch>
       </Box>
     </Box>

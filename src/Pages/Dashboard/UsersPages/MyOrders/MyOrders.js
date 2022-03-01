@@ -18,7 +18,7 @@ const MyOrders = () => {
   const { email } = user;
   useEffect(() => {
     axios
-      .get(`https://polar-bastion-01816.herokuapp.com/orders?email=${email}`)
+      .get(`https://sneakers-website.herokuapp.com/orders?email=${email}`)
       .then(res => {
         // console.log(res);
         setOrders(res.data);
@@ -29,7 +29,7 @@ const MyOrders = () => {
     const sure = window.confirm('Are You Sure to Delete this Order?');
     if (sure) {
       axios
-        .delete(`https://polar-bastion-01816.herokuapp.com/orders/${id}`)
+        .delete(`https://sneakers-website.herokuapp.com/orders/${id}`)
         .then(res => {
           // console.log(data);
           if (res.data.deletedCount === 1) {

@@ -2,13 +2,37 @@ import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
 import axios from 'axios';
 import useAuth from '../../../../hooks/useAuth';
+import TransitionsModal from './TransitionsModal';
+import ModalTest from './ModalTest';
 // import useAuth from '../../../hooks/useAuth';
 
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import Typography from '@mui/material/Typography';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
 const MakeAdmin = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  // console.log(open, 'modal open');
   const [email, setEmail] = useState('');
   //   const [success, setSuccess] = useState(false);
   const { admin } = useAuth();
-  console.log(admin);
+  // console.log(admin);
 
   //   console.log(email, 'e');
   const handleOnBlur = e => {
@@ -20,22 +44,56 @@ const MakeAdmin = () => {
     e.preventDefault();
 
     axios
-      .put(`https://polar-bastion-01816.herokuapp.com/users/admin`, user)
+      .put(`https://sneakers-website.herokuapp.com/users/admin`, user)
       .then(res => {
         console.log(res.data);
         const { data } = res;
         if (data.modifiedCount) {
           alert('Admin Created Successfully');
+          e.target.reset();
         }
         if (data.matchedCount === 1 && data.modifiedCount === 0) {
           alert('This User is already an Admin');
         }
         if (data.matchedCount === 0 && data.modifiedCount === 0) {
-          alert('User Not Found');
+          // alert('User Not Found');
+          // <TransitionsModal open={open} setOpen={setOpen} />;
+          // console.log('I am after modal');
+          // <ModalTest />;
+          <div>
+            {/* <Button onClick={handleOpen}>Open modal</Button> */}
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              open={open}
+              onClose={handleClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+            >
+              <Fade in={open}>
+                <Box sx={style}>
+                  <Typography
+                    id="transition-modal-title"
+                    variant="h6"
+                    component="h2"
+                  >
+                    Text in a modal
+                  </Typography>
+                  <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                    Duis mollis, est non commodo luctus, nisi erat porttitor
+                    ligula.
+                  </Typography>
+                </Box>
+              </Fade>
+            </Modal>
+          </div>;
         }
       });
 
-    // fetch('https://polar-bastion-01816.herokuapp.com/users/admin', {
+    // fetch('https://sneakers-website.herokuapp.com/users/admin', {
     //   method: 'PUT',
     //   headers: {
     //     'content-type': 'application/json',
@@ -68,7 +126,7 @@ const MakeAdmin = () => {
           required
           sx={{ width: '30%' }}
         />
-        <Button type="submit" variant="contained">
+        <Button onClick={handleOpen} type="submit" variant="contained">
           Make Admin
         </Button>
         {/* {success && <Alert severity="success">Made Admin Successfully!</Alert>}

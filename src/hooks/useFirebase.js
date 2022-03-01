@@ -113,14 +113,14 @@ const useFirebase = () => {
   // Check an User is Admin or not
   useEffect(() => {
     axios
-      .get(`https://polar-bastion-01816.herokuapp.com/users/${user.email}`)
+      .get(`https://sneakers-website.herokuapp.com/users/${user.email}`)
       .then(res => {
         // console.log(res);
         // console.log(res.data);
         setAdmin(res.data.admin);
       });
 
-    // fetch(`https://polar-bastion-01816.herokuapp.com/users/${user.email}`)
+    // fetch(`https://sneakers-website.herokuapp.com/users/${user.email}`)
     //   .then(res => res.json())
     //   .then(data => {
     //     setAdmin(data.admin);
@@ -143,7 +143,7 @@ const useFirebase = () => {
     const user = { email, displayName };
 
     // With Axios
-    // axios.post('https://polar-bastion-01816.herokuapp.com/users', user).then(res => {
+    // axios.post('https://sneakers-website.herokuapp.com/users', user).then(res => {
     //   console.log(res);
     //   if (res.data.insertedId) {
     //     console.log('You Are Created Specially');

@@ -19,7 +19,11 @@ const AddProduct = () => {
     axios
       .post(`https://sneakers-website.herokuapp.com/products`, product)
       .then(response => {
-        console.log(response);
+        // console.log(response);
+        if (response.data.acknowledged) {
+          alert('New Product Added Succesfully');
+          e.target.reset();
+        }
       });
   };
   return (
@@ -27,7 +31,7 @@ const AddProduct = () => {
       <h1>Add Product</h1>
       <form onSubmit={handleSubmit}>
         <TextField
-          sx={{ mb: 5 }}
+          sx={{ mb: 5, width: '50%' }}
           id="standard-basic"
           label="Product Name"
           name="name"
@@ -37,7 +41,7 @@ const AddProduct = () => {
         />
         <br />
         <TextField
-          sx={{ mb: 5 }}
+          sx={{ mb: 5, width: '50%' }}
           id="standard-basic"
           label="Description"
           name="description"
@@ -47,7 +51,7 @@ const AddProduct = () => {
         />
         <br />
         <TextField
-          sx={{ mb: 5 }}
+          sx={{ mb: 5, width: '50%' }}
           id="standard-basic"
           label="Price"
           name="price"
@@ -61,7 +65,7 @@ const AddProduct = () => {
         />
         <br />
         <TextField
-          sx={{ mb: 5 }}
+          sx={{ mb: 5, width: '50%' }}
           id="standard-basic"
           label="Image Link"
           name="image"

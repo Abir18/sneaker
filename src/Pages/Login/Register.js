@@ -11,6 +11,7 @@ import {
 import { Link, NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Navigation from '../../components/Navigation';
+import { login } from '../../data';
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
@@ -123,9 +124,9 @@ const Register = () => {
             {authError && <Alert severity="error">{authError}</Alert>}
           </Container>
         </Grid>
-        {/* <Grid item xs={12} md={6} sx={{ mt: 25 }}>
-          <img style={{ width: '70%', marginTop: '70px' }} src={login} alt="" />
-        </Grid> */}
+        <Grid item xs={12} md={6} sx={{ mt: 25 }}>
+          <img style={{ width: '60%', marginTop: '70px' }} src={login} alt="" />
+        </Grid>
       </Grid>
     </>
   );
